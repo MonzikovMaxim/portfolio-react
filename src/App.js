@@ -1,11 +1,17 @@
-import "./App.css";
-import Header from "./components/Header/Header.tsx";
+import "./App.scss";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 
