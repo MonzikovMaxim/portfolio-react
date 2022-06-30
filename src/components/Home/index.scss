@@ -1,5 +1,4 @@
 .home-page {
-  
   .text-zone {
     position: absolute;
     left: 20%;
@@ -46,5 +45,14 @@
       background: #ffd700;
       color: #333;
     }
+  }
+
+  .photo {
+    width: 600px;
+    height: 100%;
+    top: 0;
+    right: 50px;
+    position: absolute;
+    animation: fadeIn 1s 1.8s backwards;
   }
 }

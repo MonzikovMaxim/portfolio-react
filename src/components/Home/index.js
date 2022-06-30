@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Loader from "react-loaders";
+import Photo from '../../assets/images/photo.jpg'
 import "./index.scss";
 
 
@@ -12,10 +13,11 @@ const Home = () => {
       <div className="text-zone">
         <h1>Hi,
         I'm Maxim Monzikov
-        frontend developer</h1>
+        Frontend developer</h1>
         <h2>Frontend developer</h2>
         <Link to="/contact" className="contact-button">CONTACT ME</Link>
       </div>
+      <img src={Photo} alt='photo' className='photo' />
     </div>
     <Loader type="line-spin-fade-loader" />
     </>
