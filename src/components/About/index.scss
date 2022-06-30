@@ -1,0 +1,43 @@
+.techs {
+  position: absolute;
+  vertical-align: middle;
+  left: 20%;
+  top: 70%;
+  width: 35%;
+  display: flex;
+  max-height: 90%;
+  animation: fadeIn 1s 1.5s backwards;
+  flex-direction: column; 
+}
+.tech-title {
+  font-size: 35px;
+  color: #ffd700;
+  font-weight: 700;
+  margin-top: 0;
+  position: relative;
+  margin-bottom: 20px;
+  animation: fadeIn 1s 1.1s backwards;
+
+}
+
+.tech-container {
+  display: flex;
+  flex-direction: row;
+  
+
+  svg {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+
+    &:hover {
+      transform: scale(1.3);
+    }
+
+  }
+}
+
+
+
+
+
