@@ -1,24 +1,26 @@
 import React from "react";
 import Loader from "react-loaders";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import "./index.scss";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 
 const Contact = () => {
-
   function sendEmail(e) {
     e.preventDefault();
-    emailjs.sendForm('gmail', 'portfolio_template', e.target, 'Gi72QEv2GHM0p_v69')
-    .then((response) => {
-       alert("Письмо успешно отправлено")
-       console.log(response.status, response.text)
-    }, (error) => {
-      alert("Что-то пошло не так... Попробуйте отправить еще раз!")
-      console.log(error.status, error.text) 
-    });
+    emailjs
+      .sendForm("gmail", "portfolio_template", e.target, "Gi72QEv2GHM0p_v69")
+      .then(
+        (response) => {
+          alert("Письмо успешно отправлено");
+          console.log(response.status, response.text);
+        },
+        (error) => {
+          alert("Что-то пошло не так... Попробуйте отправить еще раз!");
+          console.log(error.status, error.text);
+        }
+      );
     e.target.reset();
   }
-    
-
 
   return (
     <>
@@ -65,7 +67,23 @@ const Contact = () => {
               </ul>
             </form>
           </div>
+          
+         
         </div>
+        <div className="info-map">
+            Maxim Monzikov,
+            <br />
+            Russia,
+            <br />
+            Saint-Petersburg <br />
+            <span>monzikovm@yandex.ru</span>
+          </div>
+        <div className="map-wrap">
+            <MapContainer center={[60.06304, 30.43258]} zoom={13}>
+              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></TileLayer>
+              <Marker position={[60.06304, 30.43258]}></Marker>
+            </MapContainer>
+            </div>
       </div>
       <Loader type="line-spin-fade-loader" />
     </>
