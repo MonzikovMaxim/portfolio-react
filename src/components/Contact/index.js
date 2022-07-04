@@ -28,9 +28,10 @@ const Contact = () => {
         <div className="text-zone">
           <h1>Contact me</h1>
           <p>
-            I am interested in freelance opportunities - especially ambitious or
-            large projects. However, if you have other request or question,
-            don't hesitate to contact me using below form either.
+            Мне интересно работать в большой команде с интересными проектами и
+            амбициозными людьми. Так или иначе, если у вас есть ко мне
+            какие-нибудь предложения или вопросы, можете заполнить форму и я вам
+            обязательно отвечу!
           </p>
           <div className="contact-form">
             <form onSubmit={sendEmail}>
@@ -67,23 +68,21 @@ const Contact = () => {
               </ul>
             </form>
           </div>
-          
-         
         </div>
         <div className="info-map">
-            Maxim Monzikov,
-            <br />
-            Russia,
-            <br />
-            Saint-Petersburg <br />
-            <span>monzikovm@yandex.ru</span>
-          </div>
+          Maxim Monzikov,
+          <br />
+          Russia,
+          <br />
+          Saint-Petersburg <br />
+          <span>monzikovm@yandex.ru</span>
+        </div>
         <div className="map-wrap">
-            <MapContainer center={[60.06304, 30.43258]} zoom={13}>
-              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></TileLayer>
-              <Marker position={[60.06304, 30.43258]}></Marker>
-            </MapContainer>
-            </div>
+          <MapContainer center={[60.06304, 30.43258]} zoom={13}>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"></TileLayer>
+            <Marker position={[60.06304, 30.43258]}></Marker>
+          </MapContainer>
+        </div>
       </div>
       <Loader type="line-spin-fade-loader" />
     </>

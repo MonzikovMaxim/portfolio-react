@@ -5,8 +5,17 @@ import { Link, NavLink } from "react-router-dom";
 
 import Logo from "../../assets/images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faLinkedin, faTelegram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEnvelope,
+  faHome,
+  faUser,
+  faBriefcase,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faTelegram,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Sidebar = () => {
   return (
@@ -25,6 +34,14 @@ const Sidebar = () => {
           to="/about"
         >
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+        </NavLink>
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          className="contact-link"
+          to="/portfolio"
+        >
+          <FontAwesomeIcon icon={faBriefcase} color="#4d4d4e" />
         </NavLink>
         <NavLink
           exact="true"
@@ -55,11 +72,7 @@ const Sidebar = () => {
           </a>
         </li>
         <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://t.me/monzikovm"
-          >
+          <a target="_blank" rel="noreferrer" href="https://t.me/monzikovm">
             <FontAwesomeIcon icon={faTelegram} color="#4d4d4e" />
           </a>
         </li>

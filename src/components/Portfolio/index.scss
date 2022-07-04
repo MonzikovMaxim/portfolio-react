@@ -1,0 +1,105 @@
+.portfolio-page {
+  position: absolute;
+  vertical-align: middle;
+  left: 20%;
+  top: 30%;
+  transform: translateY(-30%);
+
+  display: table-cell;
+  max-height: 90%;
+  animation: fadeIn 1s 1.5s backwards;
+}
+
+.portfolio-title {
+  width: 35%;
+  font-size: 53px;
+  color: #ffd700;
+  font-weight: 700;
+  margin-top: 0;
+  position: relative;
+  margin-bottom: 40px;
+  animation: fadeIn 1s 1.1s backwards;
+}
+
+.portfolio-grid {
+  max-width: 750px;
+  margin: 20% auto;
+
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 250px);
+  }
+
+    .portfolio__item {
+      display: block;
+      text-align: center;
+      justify-content: center;
+      font-size: 16px;
+      color: black;
+      opacity: 1;
+
+      .portfolio-overlay {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        
+        &:hover {
+          opacity: 1;
+          background-color: rgba(0, 0, 100, 0.8);
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+          font-size: 30px;
+          text-align: center;
+          box-sizing: border-box;
+          padding: 20px;
+        }
+      }
+    }
+    
+
+    .portfolio__item-hts {
+      background-image: url("../../assets//images/how-to-study.png");
+      background-size: 250px 250px;
+      animation: fadeInLeft 1s 1.2s backwards;
+    }
+
+    .portfolio__item-travel {
+      background-image: url("../../assets//images/travel.jpg");
+      background-size: 250px 250px;
+      animation: fadeInDown 1s 1.3s backwards;
+    }
+
+    .portfolio__item-mesto {
+      background-image: url("../../assets//images/mesto.png");
+      background-size: 250px 250px;
+      animation: fadeInRight 1s 1.4s backwards;
+    }
+
+    .portfolio__item-sunset {
+      background-image: url("../../assets//images/sunset.jpg");
+      background-size: 250px 250px;
+      animation: fadeInBottomLeft 1s 1.5s backwards;
+    }
+
+    .portfolio__item-game {
+      background-image: url("../../assets//images/tic-tac-toe.png");
+      background-size: 250px 250px;
+      animation: fadeInUp 1s 1.6s backwards;
+      background-color: white;
+    }
+
+    .portfolio__item-todo {
+      background-image: url("../../assets//images/todo.png");
+      background-size: 250px 250px;
+      animation: fadeInBottomRight 1s 1.7s backwards;
+      background-color: white;
+    }
+  }
