@@ -25,6 +25,10 @@
 
     git clone https://github.com/MonzikovMaxim/portfolio-react.git
 
+Установить зависимости:
+
+    npm install
+
 Запустить проект:
 
     npm run start
